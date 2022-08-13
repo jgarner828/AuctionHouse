@@ -1,4 +1,4 @@
-package com.garnerju.auctionhouse.web.models;
+package com.garnerju.auctionhouse.models;
 
 import lombok.Builder;
 import lombok.Getter;

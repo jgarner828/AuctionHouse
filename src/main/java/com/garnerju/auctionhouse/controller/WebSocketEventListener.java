@@ -1,7 +1,7 @@
-package com.garnerju.auctionhouse.web.controllers;
+package com.garnerju.auctionhouse.controller;
 
-import com.garnerju.auctionhouse.web.models.MessageType;
-import com.garnerju.auctionhouse.web.models.SocketMessage;
+import com.garnerju.auctionhouse.models.MessageType;
+import com.garnerju.auctionhouse.models.SocketMessage;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

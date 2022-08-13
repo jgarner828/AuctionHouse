@@ -1,4 +1,4 @@
-package com.garnerju.auctionhouse.web;
+package com.garnerju.auctionhouse.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
