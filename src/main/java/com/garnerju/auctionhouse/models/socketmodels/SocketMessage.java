@@ -1,5 +1,6 @@
-package com.garnerju.auctionhouse.models;
+package com.garnerju.auctionhouse.models.socketmodels;
 
+import com.garnerju.auctionhouse.models.socketmodels.MessageType;
 import lombok.*;
 
 @Builder

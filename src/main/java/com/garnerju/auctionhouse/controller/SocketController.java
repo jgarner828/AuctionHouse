@@ -1,7 +1,7 @@
 package com.garnerju.auctionhouse.controller;
 
 
-import com.garnerju.auctionhouse.models.SocketMessage;
+import com.garnerju.auctionhouse.models.socketmodels.SocketMessage;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;

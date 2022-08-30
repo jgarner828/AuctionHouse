@@ -1,7 +1,7 @@
 package com.garnerju.auctionhouse.controller;
 
-import com.garnerju.auctionhouse.models.MessageType;
-import com.garnerju.auctionhouse.models.SocketMessage;
+import com.garnerju.auctionhouse.models.socketmodels.MessageType;
+import com.garnerju.auctionhouse.models.socketmodels.SocketMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

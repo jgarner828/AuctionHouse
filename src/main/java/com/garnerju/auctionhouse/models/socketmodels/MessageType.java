@@ -1,4 +1,4 @@
-package com.garnerju.auctionhouse.models;
+package com.garnerju.auctionhouse.models.socketmodels;
 
 public enum MessageType {
     NORMAL,
