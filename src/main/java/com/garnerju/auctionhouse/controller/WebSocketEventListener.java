@@ -2,6 +2,7 @@ package com.garnerju.auctionhouse.controller;
 
 import com.garnerju.auctionhouse.models.socketmodels.MessageType;
 import com.garnerju.auctionhouse.models.socketmodels.SocketMessage;
+import lombok.extern.log4j.Log4j2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.SessionConnectedEvent;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
-
+@Log4j2
 @Component
 public class WebSocketEventListener {
 
@@ -20,8 +21,6 @@ public class WebSocketEventListener {
 
     @Autowired
     private SimpMessageSendingOperations sendingOperations;
-
-
 
     @EventListener
     public void handleWebSocketConnectListener(final SessionConnectedEvent event)  {
