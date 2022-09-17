@@ -1,5 +1,6 @@
 package com.garnerju.auctionhouse.models.socketmodels;
 
+import com.garnerju.auctionhouse.models.auctionmodels.Bid;
 import com.garnerju.auctionhouse.models.socketmodels.MessageType;
 import lombok.*;
 
@@ -14,7 +15,7 @@ public class SocketMessage {
     @Getter
     private MessageType type;
     @Getter
-    private String content;
+    private Bid newBid;
     @Getter
     private String sender;
     @Getter

@@ -24,21 +24,21 @@ public class SocketController {
     @MessageMapping("/socket.send")
     @SendTo("/topic/public")
     public List<AuctionItems> sendMessage(@Payload final SocketMessage message) {
-        System.out.println(message.getContent());
+        System.out.println(message);
         List<AuctionItems> result = service.getAuctionItems();
 
         System.out.println("result " + result);
         return result;
     }
 
-    @MessageMapping("/socket.newUser")
-    @SendTo("/topic/public")
-    public SocketMessage newUser(@Payload final SocketMessage message,
-                                 SimpMessageHeaderAccessor  headerAccessor) {
-        System.out.println(message.getContent());
-
-        headerAccessor.getSessionAttributes().put("username", message.getSender());
-    return message;
-    }
+//    @MessageMapping("/socket.newUser")
+//    @SendTo("/topic/public")
+//    public SocketMessage newUser(@Payload final SocketMessage message,
+//                                 SimpMessageHeaderAccessor  headerAccessor) {
+//        System.out.println(message.getContent());
+//
+//        headerAccessor.getSessionAttributes().put("username", message.getSender());
+//    return message;
+//    }
 
 }
