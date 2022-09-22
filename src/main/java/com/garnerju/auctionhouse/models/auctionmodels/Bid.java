@@ -22,8 +22,10 @@ public class Bid {
     private Double id;
     @Column(name="item_id")
     private Double itemId;
-    @Column(name="user_id")
-    private Double userId;
+    @Column(name="user_email")
+    private String email;
     @Column(name="bid_price")
     private Double bidPrice;
+    @Column(name="bid_time")
+    private Double bidTime;
 }

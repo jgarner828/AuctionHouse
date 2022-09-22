@@ -23,6 +23,6 @@ public class WebSocketMessageConfig implements WebSocketMessageBrokerConfigurer 
     public void configureMessageBroker(final MessageBrokerRegistry registry) {
         WebSocketMessageBrokerConfigurer.super.configureMessageBroker(registry);
         registry.setApplicationDestinationPrefixes("/app");
-        registry.enableSimpleBroker("/topic");
+        registry.enableSimpleBroker("/bids");
     }
 }

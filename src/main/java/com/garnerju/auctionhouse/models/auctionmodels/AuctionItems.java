@@ -23,6 +23,10 @@ public class AuctionItems {
     private String desc;
     @Column(name ="item_image_url")
     private String image;
+    @Column(name ="item_starting_price")
+    private Double itemStartingPrice;
+    @Column(name ="item_min_bid")
+    private Double itemMinBid;
 
 
 }

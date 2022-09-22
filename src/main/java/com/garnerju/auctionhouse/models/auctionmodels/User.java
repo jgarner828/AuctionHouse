@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -17,10 +14,9 @@ import javax.persistence.Table;
 public class User {
 
     @Id
-    @Column(name="user_id")
-    private Double id;
-    @Column(name="first_name")
-    private String firstName;
-    @Column(name="last_name")
-    private String lastName;
+    @Column(name="email")
+    private Double email;
+    @Column(name="name")
+    private String name;
+
 }

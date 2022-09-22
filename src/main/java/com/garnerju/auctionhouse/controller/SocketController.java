@@ -31,14 +31,14 @@ public class SocketController {
         return result;
     }
 
-//    @MessageMapping("/socket.newUser")
-//    @SendTo("/topic/public")
-//    public SocketMessage newUser(@Payload final SocketMessage message,
-//                                 SimpMessageHeaderAccessor  headerAccessor) {
-//        System.out.println(message.getContent());
-//
-//        headerAccessor.getSessionAttributes().put("username", message.getSender());
-//    return message;
-//    }
+    @MessageMapping("/socket.newUser")
+    @SendTo("/topic/public")
+    public SocketMessage newUser(@Payload final SocketMessage message,
+                                 SimpMessageHeaderAccessor  headerAccessor) {
+        System.out.println(message);
+
+        headerAccessor.getSessionAttributes().put("username", message.getSender());
+    return message;
+    }
 
 }

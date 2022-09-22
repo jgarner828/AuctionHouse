@@ -17,7 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .csrf().ignoringAntMatchers("/ws/**", "http://localhost**")
                 .and()
                     .authorizeRequests()
-                    .antMatchers("/ws/**", "/auctionlist").permitAll()
+                    .antMatchers("/ws/**").permitAll()
                     .anyRequest()
                     .authenticated()
                     .and()
