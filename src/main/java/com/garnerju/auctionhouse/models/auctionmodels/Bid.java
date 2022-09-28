@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -19,13 +16,13 @@ public class Bid {
 
     @Id
     @Column(name="bid_id")
-    private Double id;
+    private Long id;
     @Column(name="item_id")
-    private Double itemId;
+    private Long itemId;
     @Column(name="user_email")
     private String email;
     @Column(name="bid_price")
-    private Double bidPrice;
+    private Long bidPrice;
     @Column(name="bid_time")
-    private Double bidTime;
+    private Long bidTime;
 }

@@ -2,10 +2,7 @@ package com.garnerju.auctionhouse.models.auctionmodels;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -15,8 +12,9 @@ import javax.persistence.Table;
 public class AuctionItems {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="item_id")
-    private Double id;
+    private Long id;
     @Column(name ="item_name")
     private String name;
     @Column(name ="item_description")
@@ -24,9 +22,17 @@ public class AuctionItems {
     @Column(name ="item_image_url")
     private String image;
     @Column(name ="item_starting_price")
-    private Double itemStartingPrice;
+    private Long itemStartingPrice;
     @Column(name ="item_min_bid")
-    private Double itemMinBid;
+    private Long itemMinBid;
+
+    public AuctionItems(String name, String desc, String image, Long itemStartingPrice, Long itemMinBid) {
+        this.name = name;
+        this.desc = desc;
+        this.image = image;
+        this.itemStartingPrice = itemStartingPrice;
+        this.itemMinBid = itemMinBid;
+    }
 
 
 }

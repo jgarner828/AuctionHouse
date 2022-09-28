@@ -15,7 +15,7 @@ public class User {
 
     @Id
     @Column(name="email")
-    private Double email;
+    private String email;
     @Column(name="name")
     private String name;
 

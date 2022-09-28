@@ -19,4 +19,12 @@ public class AuctionItemService {
         System.out.println(response);
         return repository.findAll();
     }
+
+    public void addAuctionItems(AuctionItems item) {
+        try {
+            repository.save(item);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

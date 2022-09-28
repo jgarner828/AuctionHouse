@@ -36,7 +36,8 @@ public class WebSocketEventListener {
                 .sender(username)
                 .build();
 
-        sendingOperations.convertAndSend("/topic/public", socketMessage);
+        sendingOperations.convertAndSend("/topic/users", socketMessage);
+        sendingOperations.convertAndSend("/topic/bids", socketMessage);
     }
 
 }

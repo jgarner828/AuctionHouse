@@ -22,7 +22,7 @@ public class SocketController {
     private AuctionItemService service;
 
     @MessageMapping("/socket.send")
-    @SendTo("/topic/public")
+    @SendTo("/topic/bids")
     public List<AuctionItems> sendMessage(@Payload final SocketMessage message) {
         System.out.println(message);
         List<AuctionItems> result = service.getAuctionItems();
@@ -32,11 +32,10 @@ public class SocketController {
     }
 
     @MessageMapping("/socket.newUser")
-    @SendTo("/topic/public")
+    @SendTo("/topic/users")
     public SocketMessage newUser(@Payload final SocketMessage message,
                                  SimpMessageHeaderAccessor  headerAccessor) {
         System.out.println(message);
-
         headerAccessor.getSessionAttributes().put("username", message.getSender());
     return message;
     }
