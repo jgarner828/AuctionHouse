@@ -16,7 +16,7 @@ public class Bid {
 
     @Id
     @Column(name="bid_id")
-    private Long id;
+    private String id;
     @Column(name="item_id")
     private Long itemId;
     @Column(name="user_email")
@@ -25,4 +25,6 @@ public class Bid {
     private Long bidPrice;
     @Column(name="bid_time")
     private Long bidTime;
+
+    public Bid(Long item_id, String email, Long bidPrice, Long bidTime) {}
 }
