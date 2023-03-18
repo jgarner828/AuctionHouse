@@ -14,15 +14,20 @@ import javax.persistence.*;
 @Table(name="bids")
 public class Bid {
 
+
     @Id
     @Column(name="bid_id")
     private String id;
+
     @Column(name="item_id")
     private Long itemId;
+
     @Column(name="user_email")
     private String email;
+
     @Column(name="bid_price")
     private Long bidPrice;
+
     @Column(name="bid_time")
     private Long bidTime;
 

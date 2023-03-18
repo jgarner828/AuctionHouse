@@ -12,12 +12,12 @@ import lombok.*;
 @ToString
 public class SocketMessage {
 
-    @Getter
+
     private MessageType type;
-    @Getter
+
     private Bid newBid;
-    @Getter
+
     private String sender;
-    @Getter
+
     private String time;
 }

@@ -18,14 +18,19 @@ public class AuctionItems {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="item_id")
     private Long id;
+
     @Column(name ="item_name")
     private String name;
+
     @Column(name ="item_description")
     private String desc;
+
     @Column(name ="item_image_url")
     private String image;
+
     @Column(name ="item_starting_price")
     private Long itemStartingPrice;
+
     @Column(name ="item_min_bid")
     private Long itemMinBid;
 
