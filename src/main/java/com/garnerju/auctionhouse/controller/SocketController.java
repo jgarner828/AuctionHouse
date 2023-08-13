@@ -12,12 +12,14 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 
 
-@Log4j2
 @Controller
 public class SocketController {
 
-    @Autowired
     private AuctionItemService service;
+
+    public SocketController(AuctionItemService service) {
+        this.service = service;
+    }
 
     @MessageMapping("/socket.send")
     @SendTo("/topic/bids")

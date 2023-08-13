@@ -12,8 +12,13 @@ import java.util.List;
 @RestController
 public class AuctionItemsController {
 
-    @Autowired
     private AuctionItemService service;
+
+
+    public AuctionItemsController(AuctionItemService service) {
+        this.service = service;
+    }
+
 
     @GetMapping("/auctionlist")
     @ResponseStatus(HttpStatus.OK)
