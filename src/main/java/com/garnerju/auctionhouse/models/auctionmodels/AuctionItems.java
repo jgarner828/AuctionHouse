@@ -28,17 +28,17 @@ public class AuctionItems {
     @Column(name ="item_image_url")
     private String image;
 
-    @Column(name ="item_starting_price")
-    private Long itemStartingPrice;
+    @Column(name ="price")
+    private Long price;
 
     @Column(name ="item_min_bid")
     private Long itemMinBid;
 
-    public AuctionItems(String name, String desc, String image, Long itemStartingPrice, Long itemMinBid) {
+    public AuctionItems(String name, String desc, String image, Long price, Long itemMinBid) {
         this.name = name;
         this.desc = desc;
         this.image = image;
-        this.itemStartingPrice = itemStartingPrice;
+        this.price = price;
         this.itemMinBid = itemMinBid;
     }
 

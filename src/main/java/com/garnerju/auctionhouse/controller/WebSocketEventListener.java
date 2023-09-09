@@ -19,8 +19,8 @@ public class WebSocketEventListener {
 
     private static final Logger LOG = LoggerFactory.getLogger(WebSocketEventListener.class);
 
-    private SimpMessageSendingOperations sendingOperations;
 
+    private SimpMessageSendingOperations sendingOperations;
 
 
     public WebSocketEventListener(SimpMessageSendingOperations sendingOperations) {
