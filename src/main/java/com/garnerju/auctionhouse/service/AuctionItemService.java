@@ -21,14 +21,15 @@ public class AuctionItemService {
     Long newId = 0L;
 
 
+
     public List<AuctionItems> getAuctionItems() {
         try {
-            List<AuctionItems> auctionItemsList = repository.findAll();
-            System.out.println(auctionItemsList);
+            log.info("getAuctionItems");
             return repository.findAll();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
             return null;
+
         }
     }
 
@@ -36,18 +37,22 @@ public class AuctionItemService {
 
     public void addAuctionItem(AuctionItems item) {
         try {
+            log.info("addAuctionItem");
             item.setId(newId);
             repository.save(item);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
         }
     }
 
 
 
     public SocketMessage newBid(SocketMessage message) {
-        System.out.println(message);
+        log.info("newBid");
+        log.info(message.toString());
+
         Optional<AuctionItems> updateItem = repository.findById(message.getNewBid().getItemId());
+
         if(updateItem.isPresent())  {
             updateItem.get().setPrice(message.getNewBid().getBidPrice());
             repository.save(updateItem.get());

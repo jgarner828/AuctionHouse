@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 
 
 @Controller
+@Log4j2
 public class SocketController {
 
     private AuctionItemService service;
@@ -21,11 +22,13 @@ public class SocketController {
         this.service = service;
     }
 
+
     @MessageMapping("/socket.send")
     @SendTo("/topic/bids")
     public SocketMessage sendMessage(@Payload final SocketMessage message) throws Exception {
         try
         {
+            log.info("sendMessage");
             if (message.getType() == MessageType.BID)
             {
                service.newBid(message);
@@ -34,8 +37,8 @@ public class SocketController {
         }
         catch (Exception e)
         {
-            System.out.println(e.getMessage());
-            throw new RuntimeException("Failed to parse bid: " + message);
+            log.error(e.getMessage());
+            throw new RuntimeException("Failed to parse bid");
         }
 
     return message;
